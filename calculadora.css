@@ -1,0 +1,195 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("fondo.jpg");
+}
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#calculadora{
+    background-color: rgba(0, 0, 0, .5);
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+#textoPantalla{
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    font-size: 36px;
+    font-family: Arial;
+    padding: 10px;
+    justify-content: flex-end;  
+}
+.largo{
+    background: 0;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.button-71 {
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    /* cursor: pointer; */
+    display: inline-block;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-71:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+}
+
+.button-71:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+}
+.op{
+    background-color: coral;
+}
+.igualar{
+    background-color: red;
+}
+
+@media (min-width: 768px) {
+    .button-71 {
+        padding: 16px 48px;
+    }
+}
+p{
+    background: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.largobtn{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+input{
+    width: auto;
+    margin: 0px 2px;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .newtons-cradle {
+    --uib-size: 50px;
+    --uib-speed: 1.2s;
+    --uib-color: #474554;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
+  }
+
+  .newtons-cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+  }
+
+  .newtons-cradle__dot::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+  }
+
+  .newtons-cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+  }
+
+  .newtons-cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+  }
+
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+
+    25% {
+      transform: rotate(70deg);
+      animation-timing-function: ease-in;
+    }
+
+    50% {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+  }
+
+  @keyframes swing2 {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+
+    50% {
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+
+    75% {
+      transform: rotate(-70deg);
+      animation-timing-function: ease-in;
+    }
+  }
+
+  textarea, select, input, button { 
+    outline: none;
+}
+:focus { 
+    outline-color: transparent; 
+    outline-style: none;
+}
